@@ -1,4 +1,3 @@
-// app/(tabs)/_layout.tsx
 import { Tabs } from 'expo-router';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -18,12 +17,24 @@ export default function TabLayout() {
           ),
         }}
       />
+
       <Tabs.Screen
         name="products"
         options={{
           title: 'المنتجات',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="pricetag" size={size} color={color} />
+          ),
+        }}
+      />
+
+      {/* ⭐ تبويب تسجيل الدخول الجديد */}
+      <Tabs.Screen
+        name="login"
+        options={{
+          title: 'Login',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="log-in" size={size} color={color} />
           ),
         }}
       />
